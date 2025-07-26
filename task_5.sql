@@ -10,4 +10,4 @@ INSERT INTO customer (
     'Cole Baidoo',
     'cbaidoo@sandtech.com',
     '123 Happiness Ave.'
-)
+);
