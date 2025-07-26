@@ -4,15 +4,17 @@ import mysql.connector
 mydb = mysql.connector.connect(
     host="127.0.0.1",
     user="root",
-    password="123456",
-    database="data_center",
-    port=8000
+    password="admin",
+    database="alx_book_store",
+    port=3306
 )
 
 mysqlcursor = mydb.cursor()
 
 try:
-    mysqlcursor.execute("CREATE TABLE alx_book_store ()")
+    mysqlcursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
+    mysqlcursor.execute("CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
+    mysqlcursor.execute("USE alx_book_store")
 except mysql.connector.Error as err:
     print(f"Error: {err}")
 else:
