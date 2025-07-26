@@ -1,8 +1,7 @@
 USE alx_book_store;
 
-INSERT INTO customer (
+INSERT INTO Customers (
     customer_name,
-    customer_email,
     email,
     address
 ) VALUES (
